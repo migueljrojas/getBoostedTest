@@ -11,6 +11,23 @@
     );
   padding-top: 10%;
   text-align: center;
+  position: relative;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(to top, $backgroundDark, transparent);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 70%;
+
+    @media (min-width: 900px) {
+      top: 50%;
+    }
+  };
 
   &__content {
     max-width: 760px;
@@ -43,7 +60,11 @@
   }
 
   &__image {
-    max-width: 80%;
+    max-width: 90%;
+
+    @media (min-width: 900px) {
+      max-width: 80%;
+    }
   }
 
   &__cta {

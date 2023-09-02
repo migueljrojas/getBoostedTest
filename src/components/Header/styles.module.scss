@@ -1,0 +1,56 @@
+@import "../../theme/colors.scss";
+
+.header {
+  $h: &;
+
+  background: $backgroundDark;
+  border-bottom: 1px solid $borders;
+  height: 60px;
+  padding-inline: 1rem;
+
+  @media (min-width: 900px) {
+    height: 80px;
+  }
+  
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  &__brand {
+    height: 25px;
+    
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    gap: .5rem;
+    list-style: none;
+
+    @media (min-width: 900px) {
+      gap: 2rem;
+    }
+  }
+
+  &__item {
+    &:last-child {
+      #{$h}__link {
+        color: $highlight;
+      }
+    }
+  }
+
+  &__link {
+    font-size: .85rem;
+    color: $text;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,84 @@
+@import '../../../theme/colors.scss';
+
+.hero {
+  background:
+    linear-gradient(
+      to bottom,
+      $backgroundDark 10%,
+      #021D27 43%,
+      #231C22 60%,
+      $backgroundDark
+    );
+  padding-top: 10%;
+  text-align: center;
+
+  &__content {
+    max-width: 760px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  &__supertitle {
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+
+    @media (min-width: 900px) {
+      font-size: .65rem;
+      letter-spacing: 1rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    margin: 2rem;
+
+    @media (min-width: 900px) {
+      font-size: 3.8rem;
+    }
+  }
+
+  &__subtext {
+    line-height: 1.8;
+  }
+
+  &__image {
+    max-width: 80%;
+  }
+
+  &__cta {
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
+    padding: .5rem;
+    background: rgba(255,255,255,.05);
+    border-radius: .5rem;
+    height: 4rem;
+    max-width: 500px;
+    margin-inline: auto;
+  }
+
+  &__input-group {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__input {
+    background: none;
+    padding-left: 1rem;
+    height: 100%;
+    border: none;
+    outline: none;
+    flex-grow: 2;
+  }
+
+  &__submit {
+    background: $highlight;
+    border: none;
+    color: $white;
+    height: 100%;
+    padding-inline: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
